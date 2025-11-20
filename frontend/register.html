@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - HarvestHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h2>Register</h2>
+        <form id="registerForm">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+            <label for="role">Role:</label><br>
+            <select id="role" name="role" required>
+                <option value="farmer">Farmer</option>
+                <option value="supplier">Supplier</option>
+                <option value="ngo">NGO</option>
+                <option value="logistics">Logistics Partner</option>
+            </select><br><br>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login here</a>.</p>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7fafc;
+    color: #222;
+}
+header {
+    background: #4caf50;
+    color: #fff;
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+}
+nav {
+    text-align: center;
+    margin: 1rem 0;
+}
+nav a {
+    color: #388e3c;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+nav a:hover {
+    text-decoration: underline;
+    color: #43e97b;
+}
+main {
+    max-width: 700px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(67,233,123,0.10);
+    padding: 2rem;
+    animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.intro-section, .features-section, .tech-section, .cta-section {
+    margin-bottom: 2rem;
+    padding: 1rem 0.5rem;
+}
+.features-section ul, .tech-section ul {
+    padding-left: 1.2rem;
+}
+.cta-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(67,233,123,0.10);
+    transition: background 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+}
+.cta-btn:hover {
+    background: linear-gradient(90deg, #38f9d7 0%, #43e97b 100%);
+    box-shadow: 0 4px 16px rgba(67,233,123,0.18);
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #e0e0e0;
+    color: #555;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.food-listings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.food-card {
+    perspective: 1000px;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(56,142,60,0.10);
+    background: #f9fff9;
+    min-height: 260px;
+    position: relative;
+}
+.food-card:hover {
+    box-shadow: 0 6px 24px rgba(67,233,123,0.18);
+}
+.food-card-inner {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.food-card.flipped .food-card-inner {
+    transform: rotateY(180deg);
+}
+.food-card-front, .food-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    box-shadow: none;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.food-card-front {
+    z-index: 2;
+}
+.food-card-back {
+    transform: rotateY(180deg);
+    background: #e8f5e9;
+    z-index: 1;
+}
+.food-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(67,233,123,0.15);
+}
+.food-info h4 {
+    margin: 0.5rem 0 0.2rem 0;
+    color: #388e3c;
+}
+.food-info p {
+    margin: 0.1rem 0;
+    font-size: 0.98rem;
+}
+.claim-btn {
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(67,233,123,0.10);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.claim-btn:hover {
+    background: linear-gradient(90deg, #38f9d7 0%, #43e97b 100%);
+    box-shadow: 0 4px 16px rgba(67,233,123,0.18);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background: #f7fafc;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 1px 4px rgba(56,142,60,0.06);
+    margin-top: 1.5rem;
+}
+input, select, button {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+button {
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button:hover {
+    background: #388e3c;
+}
+@media (max-width: 800px) {
+    main {
+        max-width: 98vw;
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+}
+@media (max-width: 600px) {
+    header {
+        padding: 1.2rem 0.5rem 0.5rem 0.5rem;
+    }
+    main {
+        padding: 0.5rem;
+    }
+    nav a {
+        margin: 0 0.5rem;
+        font-size: 1rem;
+    }
+    .cta-btn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.8rem 0;
+    }
+}
+@media (max-width: 900px) {
+    .food-listings-grid {
+        gap: 1rem;
+    }
+}
+@media (max-width: 700px) {
+    .food-listings-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 480px) {
+    .food-card-inner {
+        height: 200px;
+    }
+}

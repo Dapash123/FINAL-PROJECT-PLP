@@ -1,0 +1,6 @@
+Flask
+Flask-Cors
+Flask-SQLAlchemy
+python-dotenv
+PyMySQL
+# Remember to set SECRET_KEY in your .env file for Flask security

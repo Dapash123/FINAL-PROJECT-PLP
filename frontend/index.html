@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HarvestHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>HarvestHub</h1>
+        <p>AI-Powered Surplus Food Redistribution Network</p>
+    </header>
+    <nav>
+        <a href="login.html">Login</a> |
+        <a href="register.html">Register</a> |
+        <a href="dashboard.html">Dashboard</a>
+    </nav>
+    <main>
+        <section class="intro-section">
+            <h2>Reduce Food Waste. Feed Communities.</h2>
+            <p><strong>Problem:</strong> Small farmers and food producers often lose income due to surplus or "imperfect" produce that doesn’t reach markets and exploitation by middlemen. Meanwhile, communities face food insecurity.</p>
+            <p><strong>Solution:</strong> HarvestHub is a mobile/web platform that uses AI and geolocation to connect small-scale farmers, grocery stores, and restaurants with surplus food to local NGOs, food banks, or community kitchens in real time.</p>
+        </section>
+        <section class="features-section">
+            <h3>How It Works</h3>
+            <ul>
+                <li>Farmers input surplus crops via app (with photo + location).</li>
+                <li>AI estimates quantity and shelf life using image recognition.</li>
+                <li>System matches with nearest pickup/distribution partner.</li>
+                <li>Low-cost logistics partners handle transport.</li>
+                <li>Commercial suppliers pay a 10% service fee on redistributed food (NGOs are free).</li>
+            </ul>
+        </section>
+        <section class="tech-section">
+                <li>Backend: Python (Flask) – REST API</li>
+                <li>Database: MySQL</li>
+                <li>AI/ML: Hugging Face Transformers (Image-to-Text QA + Crop Insight Models)</li>
+                <li>Payments: Flutterwave, Paystack, or Paga API</li>
+                <li>Cloud Deployment: Render, Vercel, or similar</li>
+            </ul>
+        </section>
+        <section class="cta-section">
+            <h3>Ready to Join?</h3>
+            <a href="register.html" class="cta-btn">Get Started</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 HarvestHub. Reducing food waste, improving food access.</p>
+    </footer>
+</body>
+</html>
